@@ -1,0 +1,46 @@
+.navContainer {
+    position: fixed;
+    bottom: 0;
+    /* Убираем отступ снизу */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 2px;
+    border-radius: 16px;
+    border-color: gray;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Растягиваем на всю ширину экрана */
+}
+
+.navContainer svg {
+    font-size: 50px;
+    color: #333;
+    transition: transform 0.5s ease;
+    transform: translateY(10px); /* Сдвигаем вниз на 15px, примерно половину высоты */
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    background-color: #242424;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    width: 100%;
+    /* Растягиваем на всю ширину экрана */
+    text-align: center;
+    color: #555;
+}
+
+.dropdownOpen {
+    height: 100px;
+    /* Или другая нужная вам высота */
+    background-color: #242424;
+}
+

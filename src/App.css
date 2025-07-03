@@ -1,0 +1,183 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo.shiza {
+  border: 1px solid #333;
+  border-radius: 16px;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 0.5em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 0.5em #61dafbaa);
+}
+
+.logo.vk:hover {
+  filter: drop-shadow(0 0 0.5em #00c8ffaa);
+}
+
+.logo.html:hover {
+  filter: drop-shadow(0 0 0.5em #ff7811aa);
+}
+
+.logo.css:hover {
+  filter: drop-shadow(0 0 0.5em #00c8ffaa);
+}
+
+.logo.Csharp:hover {
+  filter: drop-shadow(0 0 0.5em #8f0fffaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/*Крутка логотипов*/
+.skill-container {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  border-color: #646cffaa;
+  filter: drop-shadow(0 0 1em #646cffaa);
+  width: 200px;
+  /* Задайте нужную ширину */
+  height: 300px;
+  /* Задайте нужную высоту */
+  overflow: hidden;
+  position: relative;
+  margin: 50px;
+}
+
+.skill-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: slideDown 10s linear infinite;
+  /* 10s - длительность анимации,  linear - равномерная скорость, infinite - бесконечное повторение */
+}
+
+.skill-item {
+  width: 100%;
+  height: 100px;
+  /* Высота каждого элемента (должна соответствовать iconHeight в JS) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* Важно для правильного расчета размеров */
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+    /* Начальное положение */
+  }
+
+  100% {
+    transform: translateY(-100%);
+    /* Конечное положение - сдвиг вверх на 100% от собственной высоты */
+  }
+}
+
+/*Главный див*/
+.mainDiv {
+  display: flex;
+}
+
+/*Проекты*/
+.project-container {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  border-color: #646cffaa;
+  filter: drop-shadow(0 0 1em #646cffaa);
+  width: 803px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+  margin: 0 auto;
+  overflow-y: auto;
+  /* Включаем вертикальную прокрутку */
+  scroll-snap-type: y mandatory;
+  /* Делаем прокрутку по элементам по вертикали */
+  -webkit-overflow-scrolling: touch;
+  /* Для плавной прокрутки на iOS */
+}
+
+.project-container::-webkit-scrollbar {
+  display: none;
+  /* Скрываем скроллбар в Chrome, Safari и Edge */
+}
+
+.project {
+  margin: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 16px;
+}
+
+.project p {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/*Описание скилов*/
+.divHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  border-radius: 16px;
+}
+
+.info {
+  width: 500px;
+}
+
+.arrow {
+  height: 6em;
+  color: #333;
+  display: inline-block;
+  /* Чтобы можно было применять translate */
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-5px);
+    /* На сколько пикселей двигать вверх */
+  }
+}
